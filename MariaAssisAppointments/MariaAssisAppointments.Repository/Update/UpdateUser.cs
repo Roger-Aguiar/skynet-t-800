@@ -11,6 +11,7 @@
             userQuery.Password = user.Password;
             userQuery.Email = user.Email;
             userQuery.RegisterDate = user.RegisterDate;
+            userQuery.LinkPac = user.LinkPac;
             databaseContext.SaveChanges();
         }
     }

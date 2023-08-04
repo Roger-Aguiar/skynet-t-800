@@ -3,15 +3,16 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
 {
     public partial class FormCustomers : Form
     {
-        private User? CurrentUser { get; set; }
+        private User CurrentUser { get; set; }
         public List<People> Customers { get; set; } = new();
         private WebScrapper webScrapper = new();
         private List<Pacs> listOfPacs = new();
+        private string linkPac;
 
         private bool update;
         private int index = 0;
 
-        public FormCustomers(User? currentUser)
+        public FormCustomers(User currentUser)
         {
             CurrentUser = currentUser;
             InitializeComponent();
@@ -94,9 +95,17 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
         #endregion
 
         private void ButtonMakeAppointments_Click(object sender, EventArgs e)
-        {
+        {            
             GetAvailablePacsWeb();
             webScrapper.MakeAppointment(listOfPacs, Customers);
+            CurrentUser.LinkPac = listOfPacs[0].Id;
+            UserService userService = new(CurrentUser, "O link da PAC para teste dos dados foi atualizado com sucesso!");
+            userService.Update();
+            if (webScrapper.NumberOfAppointments < Customers.Count)
+            {
+                string message = $"{Customers.Count - webScrapper.NumberOfAppointments} de seus clientes não passaram pelo processo de agendamento, talvez é porque não há vagas disponíveis nas PACs escolhidas por eles, caso queira, você pode executar o processo novamente para verificar se abriram novas vagas, basta você fechar o aplicativo, entrar novamente e clicar no botão \"Fazer agendamentos\".";
+                MessageBox.Show(message, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void ButtonRegisterCustomers_Click(object sender, EventArgs e)

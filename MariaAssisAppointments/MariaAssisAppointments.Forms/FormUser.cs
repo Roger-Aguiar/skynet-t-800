@@ -27,7 +27,7 @@
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            UserService userService = new(FillUserModel());
+            UserService userService = new(FillUserModel(), "Conta criada com sucesso!");
             userService.Create();
             this.Close();
         }
