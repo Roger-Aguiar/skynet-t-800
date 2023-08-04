@@ -1,7 +1,10 @@
-﻿namespace MariaAssisAppointments.MariaAssisAppointments.Shared
+﻿#nullable disable
+namespace MariaAssisAppointments.MariaAssisAppointments.Shared
 {
     public class WebScrapper : Web
     {
+        public int NumberOfAppointments { get; set; }
+
         public List<Pacs> GetAvailablePacs(string url)
         {
             List<Pacs> listOfPacs = new();
@@ -49,6 +52,7 @@
 
         public async void MakeAppointment(List<Pacs> listOfPacs, List<People> customers)
         {
+            NumberOfAppointments = 0;
             var web = new Web();
 
             foreach (var person in customers)
@@ -72,6 +76,7 @@
                     var result = await solve_captcha.ReCaptchaV2Async("f19489630e32745e0e7a81d18237b05d", captcha_key, link);
                     web.ExecuteScript($"document.querySelector('#g-recaptcha-response').innerHTML = '{result.Request}';");
                     web.AssignValue(TypeElement.Id, "dataNascimento", person.Birthdate).element.SendKeys(OpenQA.Selenium.Keys.Enter);
+                    NumberOfAppointments++;
                 }
             }
         }
@@ -81,7 +86,7 @@
             var web = new Web();
 
             web.StartBrowser();
-            var link = $"https://amcin.e-instituto.com.br/Vsoft.iDSPS.Agendamento/Agendamento/Agendar/044ed07a-fc03-48e0-a374-86fadfad2634";
+            var link = $"https://amcin.e-instituto.com.br/Vsoft.iDSPS.Agendamento/Agendamento/Agendar/4de92783-0793-4e83-8bca-2beed7ddaa10";
             web.Navigate(link);
             web.WaitForLoad();
             web.AssignValue(TypeElement.Id, "via", "1ª Via");

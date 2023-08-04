@@ -35,7 +35,7 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            UserService userService = new(FillUserModel());
+            UserService userService = new(FillUserModel(), "");
             userService.Read();
             users = userService.Users;
             var userQuery = from user in users where user.Name == TextBoxUser.Text select user;

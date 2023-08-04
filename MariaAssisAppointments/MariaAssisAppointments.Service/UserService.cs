@@ -5,12 +5,14 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Service
     {
         private readonly Director directorUser = new();
         private readonly ConcreteUserBuilder userBuilder = new();
+        private string Message { get; set; }
         public List<User> Users { get; set; }
         private User User { get; set; }
 
-        public UserService(User user)
+        public UserService(User user, string message)
         {
             User = user;
+            Message = message;
         }
 
         public User FillUserModel() => new() { Name = User.Name, Password = User.Password, Email = User.Email, RegisterDate = User.RegisterDate };
@@ -21,7 +23,7 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Service
             {
                 directorUser.Builder = userBuilder;
                 directorUser.Create(FillUserModel());
-                MessageBox.Show("Conta criada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Message, "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -56,8 +58,9 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Service
                 userUpdate.Password = User.Password;
                 userUpdate.Email = User.Email;
                 userUpdate.RegisterDate = DateTime.Now.ToString("dd/MM/yyyy");
+                userUpdate.LinkPac = User.LinkPac;
                 directorUser.Update(userUpdate);
-                MessageBox.Show("Dados atualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Message, "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -75,7 +78,7 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Service
                 var userQuery = from user in Users where (user.Name?.Trim() == User.Name?.Trim()) select user;
                 var userDelete = userQuery.FirstOrDefault();
                 directorUser.Delete(userDelete);
-                MessageBox.Show("Sua conta foi excluída com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Message, "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Application.Exit();
             }
             catch (Exception ex)
