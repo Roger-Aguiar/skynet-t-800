@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cuDGQHi1XWFf5H07ynSUx0jv7yYRDNXSiHu0spdVHvljFCkDoCSTOq/g/yuwR1/vIB2mR523Ddh32ISeOzASww==",
+  "dgSpecHash": "ZSCHeeZpqpRDa184dn+Sp+T+cVy15+uE8FDi5FEW5z9irid3GlmI4WThB5HvxCKlPCP3wNxxQKaRdRD5RwSzmg==",
   "success": true,
-  "projectFilePath": "C:\\dev\\skynet-the-judgment-day\\MariaAssisAppointments\\MariaAssisAppointments.csproj",
+  "projectFilePath": "C:\\dev\\skynet-t-800\\MariaAssisAppointments\\MariaAssisAppointments.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\roger\\.nuget\\packages\\2captcha\\2.2.0\\2captcha.2.2.0.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\easy.automation\\1.0.0.12\\easy.automation.1.0.0.12.nupkg.sha512",

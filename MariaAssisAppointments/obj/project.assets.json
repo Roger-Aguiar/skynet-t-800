@@ -3136,11 +3136,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\skynet-the-judgment-day\\MariaAssisAppointments\\MariaAssisAppointments.csproj",
+      "projectUniqueName": "C:\\dev\\skynet-t-800\\MariaAssisAppointments\\MariaAssisAppointments.csproj",
       "projectName": "MariaAssisAppointments",
-      "projectPath": "C:\\dev\\skynet-the-judgment-day\\MariaAssisAppointments\\MariaAssisAppointments.csproj",
+      "projectPath": "C:\\dev\\skynet-t-800\\MariaAssisAppointments\\MariaAssisAppointments.csproj",
       "packagesPath": "C:\\Users\\roger\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\skynet-the-judgment-day\\MariaAssisAppointments\\obj\\",
+      "outputPath": "C:\\dev\\skynet-t-800\\MariaAssisAppointments\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\roger\\AppData\\Roaming\\NuGet\\NuGet.Config",
