@@ -37,13 +37,13 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            UserService userService = new(FillModel());
+            UserService userService = new(FillModel(), "Dados atualizados com sucesso!");
             userService.Update();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            UserService userService = new(FillModel());
+            UserService userService = new(FillModel(), "Conta excluída com sucesso!");
             var question = MessageBox.Show("Tem certeza que deseja excluir sua conta?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (question == DialogResult.Yes)
                 userService.Delete();
