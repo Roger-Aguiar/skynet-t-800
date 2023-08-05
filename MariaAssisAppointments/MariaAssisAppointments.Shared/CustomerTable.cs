@@ -2,7 +2,7 @@
 {
     public static class CustomerTable
     {
-        public static FormattableString Read() => $"SELECT * FROM Customer;";
+        public static FormattableString Read() => $"SELECT * FROM Customer ORDER By Pac;";
 
     }
 }

@@ -49,7 +49,7 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Shared
                 web.AssignValue(TypeElement.Name, "cpf", customer.Cpf).element.SendKeys(OpenQA.Selenium.Keys.Enter);
             }
         }
-
+                
         public async void MakeAppointment(List<Pacs> listOfPacs, List<People> customers)
         {
             NumberOfAppointments = 0;

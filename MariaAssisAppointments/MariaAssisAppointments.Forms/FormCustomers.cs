@@ -96,7 +96,7 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
         {
             List<People> customersCopy = new();
             var pendentCustomers = from customers in Customers where customers.UserId == CurrentUser.UserId && customers.AppointmentStatus == "Pendente" select customers;
-            
+
             foreach (var item in pendentCustomers)
             {
                 customersCopy.Add(new People()
