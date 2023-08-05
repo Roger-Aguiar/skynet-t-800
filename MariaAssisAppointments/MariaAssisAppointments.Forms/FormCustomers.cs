@@ -92,12 +92,38 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
 
         private void GetAvailablePacsWeb() => listOfPacs = webScrapper.GetAvailablePacs("https://amcin.e-instituto.com.br/Vsoft.iDSPS.Agendamento/Agendamento");
 
+        private List<People> GetPendentCustomers()
+        {
+            List<People> customersCopy = new();
+            var pendentCustomers = from customers in Customers where customers.UserId == CurrentUser.UserId && customers.AppointmentStatus == "Pendente" select customers;
+            
+            foreach (var item in pendentCustomers)
+            {
+                customersCopy.Add(new People()
+                {
+                    PeopleId = item.PeopleId,
+                    Name = item.Name,
+                    Cpf = item.Cpf,
+                    Birthdate = item.Birthdate,
+                    FatherName = item.FatherName,
+                    MotherName = item.MotherName,
+                    PaymentStatus = item.PaymentStatus,
+                    PhoneNumber = item.PhoneNumber,
+                    Period = item.Period,
+                    UserId = item.UserId,
+                    Pac = item.Pac,
+                    AppointmentStatus = item.AppointmentStatus,
+                    Code = item.Code
+                });
+            }
+            return customersCopy;
+        }
         #endregion
 
         private void ButtonMakeAppointments_Click(object sender, EventArgs e)
-        {            
+        {
             GetAvailablePacsWeb();
-            webScrapper.MakeAppointment(listOfPacs, Customers);
+            webScrapper.MakeAppointment(listOfPacs, GetPendentCustomers());
             CurrentUser.LinkPac = listOfPacs[0].Id;
             UserService userService = new(CurrentUser, "O link da PAC para teste dos dados foi atualizado com sucesso!");
             userService.Update();
