@@ -81,12 +81,12 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Shared
             }
         }
 
-        public async void CheckData(People customer)
+        public async void CheckData(People customer, User user)
         {
             var web = new Web();
 
             web.StartBrowser();
-            var link = $"https://amcin.e-instituto.com.br/Vsoft.iDSPS.Agendamento/Agendamento/Agendar/4de92783-0793-4e83-8bca-2beed7ddaa10";
+            var link = $"https://amcin.e-instituto.com.br/Vsoft.iDSPS.Agendamento/Agendamento/Agendar/{user.LinkPac}";
             web.Navigate(link);
             web.WaitForLoad();
             web.AssignValue(TypeElement.Id, "via", "1ª Via");

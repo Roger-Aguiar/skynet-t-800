@@ -90,7 +90,8 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
             Label1NumberOfCustomers.Text = $"Número de clientes para agendar: {Customers.Count}";
         }
 
-        private void GetAvailablePacsWeb() => listOfPacs = webScrapper.GetAvailablePacs("https://amcin.e-instituto.com.br/Vsoft.iDSPS.Agendamento/Agendamento");
+        //private void GetAvailablePacsWeb() => listOfPacs = webScrapper.GetAvailablePacs("https://amcin.e-instituto.com.br/Vsoft.iDSPS.Agendamento/Agendamento");
+        private void GetAvailablePacsWeb() => listOfPacs = webScrapper.GetAvailablePacs("C:\\dev\\skynet-t-800\\MariaAssisAppointments\\MariaAssisAppointments.Demo\\agendamentos2.html");
 
         private List<People> GetPendentCustomers()
         {
@@ -205,7 +206,7 @@ namespace MariaAssisAppointments.MariaAssisAppointments.Forms
 
         private void ButtonCheckData_Click(object sender, EventArgs e)
         {
-            webScrapper.CheckData(FillPeopleModel());
+            webScrapper.CheckData(FillPeopleModel(), CurrentUser);
         }
     }
 }
