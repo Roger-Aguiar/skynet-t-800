@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uZHm1k5wF0y3wFklqT7/0Em+RyXi3rmbn2VO1cZPAMqmecPjp3otZzydIMS6wAsqNMWADkMXRcJDxwQba94Q/g==",
+  "dgSpecHash": "7GyAzax9NYIz0RdztweVz+vwFtrwlZjnMPjcd3bFT8CSWHE7xjyubUuDB3lFNIdix0MIhRTAoZ41h9nS9tKurg==",
   "success": true,
   "projectFilePath": "C:\\dev2\\skynet-t-800\\MariaAssisAppointments\\MariaAssisAppointments.csproj",
   "expectedPackageFiles": [
@@ -41,7 +41,7 @@
     "C:\\Users\\roger\\.nuget\\packages\\selenium.phantomjs.webdriver\\2.1.1\\selenium.phantomjs.webdriver.2.1.1.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\selenium.support\\3.8.0\\selenium.support.3.8.0.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\selenium.webdriver\\3.8.0\\selenium.webdriver.3.8.0.nupkg.sha512",
-    "C:\\Users\\roger\\.nuget\\packages\\selenium.webdriver.chromedriver\\115.0.5790.10200\\selenium.webdriver.chromedriver.115.0.5790.10200.nupkg.sha512",
+    "C:\\Users\\roger\\.nuget\\packages\\selenium.webdriver.chromedriver\\117.0.5938.9200\\selenium.webdriver.chromedriver.117.0.5938.9200.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\sikuli4net\\1.0.6\\sikuli4net.1.0.6.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
