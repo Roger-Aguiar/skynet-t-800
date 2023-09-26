@@ -660,7 +660,7 @@
           }
         }
       },
-      "Selenium.WebDriver.ChromeDriver/115.0.5790.10200": {
+      "Selenium.WebDriver.ChromeDriver/117.0.5938.9200": {
         "type": "package",
         "build": {
           "build/Selenium.WebDriver.ChromeDriver.targets": {}
@@ -1961,10 +1961,10 @@
         "selenium.webdriver.nuspec"
       ]
     },
-    "Selenium.WebDriver.ChromeDriver/115.0.5790.10200": {
-      "sha512": "2YLCCJpAORYwtUxs/zKscVZiAY++Bb2Ze8eeFa22fjKiGHgvsUwotHUSoze7O72kPM8lzZTwTo0vOlX4HqrYrA==",
+    "Selenium.WebDriver.ChromeDriver/117.0.5938.9200": {
+      "sha512": "cCeKHiyR5Duu2Vwd+JFT+iBz3U0MiCI0Fmwl6GUdlkE6LigkANDj+dIound5FZxIe8ieiV+/jvTCGy6CnDxRLw==",
       "type": "package",
-      "path": "selenium.webdriver.chromedriver/115.0.5790.10200",
+      "path": "selenium.webdriver.chromedriver/117.0.5938.9200",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1980,7 +1980,7 @@
         "driver/win32/LICENSE.chromedriver",
         "driver/win32/chromedriver.exe",
         "nupkg-icon.png",
-        "selenium.webdriver.chromedriver.115.0.5790.10200.nupkg.sha512",
+        "selenium.webdriver.chromedriver.117.0.5938.9200.nupkg.sha512",
         "selenium.webdriver.chromedriver.nuspec"
       ]
     },
@@ -3127,7 +3127,7 @@
       "Microsoft.EntityFrameworkCore >= 7.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.9",
       "MySql.EntityFrameworkCore >= 7.0.5",
-      "Selenium.WebDriver.ChromeDriver >= 115.0.5790.10200"
+      "Selenium.WebDriver.ChromeDriver >= 117.0.5938.9200"
     ]
   },
   "packageFolders": {
@@ -3193,7 +3193,7 @@
           },
           "Selenium.WebDriver.ChromeDriver": {
             "target": "Package",
-            "version": "[115.0.5790.10200, )"
+            "version": "[117.0.5938.9200, )"
           }
         },
         "imports": [
